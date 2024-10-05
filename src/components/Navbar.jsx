@@ -23,7 +23,6 @@ const Navbar = () => {
   return (
     <AppBar position="static" sx={{ bgcolor: '#123456' }}>
       <Toolbar>
-        {/* For mobile screens, show the burger menu */}
         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
           <IconButton
             size="large"
@@ -59,7 +58,6 @@ const Navbar = () => {
           </Menu>
         </Box>
 
-        {/* For medium and larger screens, show the nav items horizontally */}
         <Typography
           variant="h6"
           noWrap
