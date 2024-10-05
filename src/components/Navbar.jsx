@@ -1,38 +1,87 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, IconButton, Typography, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Typography, Box, Menu, MenuItem, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [anchorElNav, setAnchorElNav] = useState(null);
 
-  const toggleDrawer = () => {
-    setIsDrawerOpen(!isDrawerOpen);
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
   };
 
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const pages = [
+    { name: 'About Me', path: '/' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Contact', path: '/contact' }
+  ];
+
   return (
-    <>
-      <AppBar position="sticky" sx={{ bgcolor: '#123456', transition: '0.3s' }}>
-        <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer}>
+    <AppBar position="static" sx={{ bgcolor: '#123456' }}>
+      <Toolbar>
+        {/* For mobile screens, show the burger menu */}
+        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <IconButton
+            size="large"
+            aria-label="menu"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleOpenNavMenu}
+            color="inherit"
+          >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            My Portfolio
-          </Typography>
-        </Toolbar>
-      </AppBar>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+            sx={{ display: { xs: 'block', md: 'none' } }}
+          >
+            {pages.map((page) => (
+              <MenuItem key={page.name} onClick={handleCloseNavMenu} component={Link} to={page.path}>
+                <Typography textAlign="center">{page.name}</Typography>
+              </MenuItem>
+            ))}
+          </Menu>
+        </Box>
 
-      <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer}>
-        <List>
-          {['About Me', 'Projects', 'Contact'].map((text, index) => (
-            <ListItem button key={text} onClick={toggleDrawer} component={Link} to={`/${text.toLowerCase().replace(/\s+/g, '')}`}>
-              <ListItemText primary={text} />
-            </ListItem>
+        {/* For medium and larger screens, show the nav items horizontally */}
+        <Typography
+          variant="h6"
+          noWrap
+          component="div"
+          sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
+        >
+          My Portfolio
+        </Typography>
+        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+          {pages.map((page) => (
+            <Button
+              key={page.name}
+              component={Link}
+              to={page.path}
+              sx={{ color: 'white', margin: '0 10px' }}
+            >
+              {page.name}
+            </Button>
           ))}
-        </List>
-      </Drawer>
-    </>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 };
 
