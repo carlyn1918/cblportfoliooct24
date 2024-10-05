@@ -21,7 +21,14 @@ const Navbar = () => {
   ];
 
   return (
-    <AppBar position="static" sx={{ bgcolor: '#123456' }}>
+    <AppBar 
+      position="fixed"  // Fixed at the top
+      sx={{ 
+        bgcolor: '#123456', 
+        width: '100%',     // Stretch to full width
+        zIndex: 1201       // Make sure it's above other content
+      }}
+    >
       <Toolbar>
         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
           <IconButton

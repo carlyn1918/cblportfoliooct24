@@ -9,14 +9,16 @@ const Contact = () => {
       <Navbar />
       <Box 
         sx={{
-          minHeight: '80vh', 
+          minHeight: 'calc(100vh - 64px)', 
           display: 'flex', 
           justifyContent: 'center', 
           alignItems: 'center', 
-          padding: '20px'
+          paddingTop: '64px',
+          boxSizing: 'border-box',
+          width: '100vw'  // Change this from width: 700px to 100vw
         }}
       >
-        <Box sx={{ textAlign: 'center', maxWidth: '800px' }}>
+        <Box sx={{ maxWidth: '100%' }}>
           <Typography variant="h3" gutterBottom>
             Contact
           </Typography>
