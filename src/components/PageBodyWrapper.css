@@ -4,10 +4,13 @@
     display: flex;
     flex-direction: column;
     flex-shrink: 1;
-    overflow-x: hidden; /* No horizontal scrolling */
+    
     padding: 0;
     padding-bottom: 150px;
     margin: 0;
-    background-color: darkkhaki;
+    background-color: rgb(88, 87, 73);
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
   }
   
