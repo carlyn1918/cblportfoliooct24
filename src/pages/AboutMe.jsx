@@ -19,7 +19,11 @@ const AboutMe = () => {
           alignItems: "center",
           gap: "20px",
           padding: "20px",
-          marginTop: "60px", // Adds space to avoid overlap with Navbar
+          marginTop: {
+            xs: "200px", // Larger margin for mobile devices (xs: extra small)
+            sm: "80px", // Smaller margin for small devices
+            md: "10px", // Default margin for medium to larger screens
+          }, // Adds space to avoid overlap with Navbar
         }}
       >
         {/* First Box - Introduction */}
