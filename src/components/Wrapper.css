@@ -1,0 +1,11 @@
+/* src/components/Wrapper.css */
+.wrapper {
+    height: 100vh; /* Takes full viewport height */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Scroll only if content overflows */
+    overflow-x: hidden; /* No horizontal scrolling */
+    padding: 0;
+    margin: 0;
+  }
+  

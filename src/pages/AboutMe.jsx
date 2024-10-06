@@ -9,13 +9,11 @@ const AboutMe = () => {
       <Navbar />
       <Box 
         sx={{
-          minHeight: 'calc(100vh - 64px)', 
+          minHeight: '80vh', 
           display: 'flex', 
           justifyContent: 'center', 
           alignItems: 'center', 
-          paddingTop: '64px',
-          boxSizing: 'border-box',
-          width: '100vw'  // Change this from width: 700px to 100vw
+          padding: '20px'
         }}
       >
         <Box sx={{ textAlign: 'center', maxWidth: '800px' }}>
