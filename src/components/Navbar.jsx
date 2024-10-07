@@ -36,7 +36,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" sx={{ marginBottom: '5px' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />

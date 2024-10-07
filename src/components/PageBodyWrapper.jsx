@@ -2,8 +2,8 @@
 import React from "react";
 import "./PageBodyWrapper.css"; // Linking the CSS file
 
-const PageWrapper = ({ children }) => {
+const PageBodyWrapper = ({ children }) => {
   return <div className="wrapper">{children}</div>;
 };
 
-export default PageWrapper;
+export default PageBodyWrapper;
