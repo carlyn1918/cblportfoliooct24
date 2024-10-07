@@ -27,7 +27,7 @@ const Contact = () => {
           </Typography>
         </Box>
       </Box>
-      <Footer />
+      
     </>
   );
 };

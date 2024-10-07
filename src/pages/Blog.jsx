@@ -4,9 +4,10 @@ import Footer from "../components/Footer";
 import { Box, Typography } from "@mui/material";
 import PageBodyWrapper from "../components/PageBodyWrapper";
 
-const AboutMe = () => {
+const Blog = () => {
   return (
     <>
+
       <Navbar />
       <PageBodyWrapper>
         
@@ -46,21 +47,6 @@ const AboutMe = () => {
               implementation and remote deployments. Lorem ipsum dolor sit amet,
               consectetur adipiscing elit. Curabitur non nulla sit amet nisl
               tempus convallis quis ac lectus.
-
-              <p>
-              Hi, I'm Carlo! I'm a passionate developer with experience in IT
-              implementation and remote deployments. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Curabitur non nulla sit amet nisl
-              tempus convallis quis ac lectus
-              </p>
-
-
-              <p>
-              Hi, I'm Carlo! I'm a passionate developer with experience in IT
-              implementation and remote deployments. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Curabitur non nulla sit amet nisl
-              tempus convallis quis ac lectus
-              </p>
             </Typography>
           </Box>
 
@@ -118,4 +104,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default Blog;

@@ -27,7 +27,7 @@ const Projects = () => {
           </Typography>
         </Box>
       </Box>
-      <Footer />
+      
     </>
   );
 };
