@@ -8,8 +8,8 @@ const Blog = () => {
   return (
     <>
 
-      <Navbar />
-      <PageBodyWrapper>
+
+      
         
 
         {/* Container to center the boxes */}
@@ -99,7 +99,7 @@ const Blog = () => {
         </Box>
 
         
-      </PageBodyWrapper>
+      
     </>
   );
 };

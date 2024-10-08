@@ -6,7 +6,7 @@ import { Box, Typography } from '@mui/material';
 const Projects = () => {
   return (
     <>
-      <Navbar />
+      
       <Box 
         sx={{
           minHeight: 'calc(100vh - 64px)', 

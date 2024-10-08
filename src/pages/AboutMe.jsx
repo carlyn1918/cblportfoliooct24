@@ -7,8 +7,7 @@ import PageBodyWrapper from "../components/PageBodyWrapper";
 const AboutMe = () => {
   return (
     <>
-      <Navbar />
-      <PageBodyWrapper>
+     
         
 
         {/* Container to center the boxes */}
@@ -113,7 +112,7 @@ const AboutMe = () => {
         </Box>
 
         
-      </PageBodyWrapper>
+     
     </>
   );
 };
