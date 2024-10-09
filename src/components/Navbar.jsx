@@ -96,8 +96,13 @@ function Navbar() {
               sx={{ display: { xs: "block", md: "none" },  }}
             >
               {pages.map((page) => (
-             // MenuItem Settings
-             <MenuItem key={page} onClick={handleCloseNavMenu} sx={{backgroundColor: "#000",}} >  
+             // MenuItem Settings - Drop down menu when in Mobile device mode
+             <MenuItem key={page} onClick={handleCloseNavMenu} sx={{
+              backgroundColor: "#000", // Initial background color
+              "&:hover": {
+                backgroundColor: "blue", // Change to blue on hover
+              },
+            }} >  
                   <Typography 
                     component={Link}
                     to={`/${page.replace(/\s+/g, "").toLowerCase()}`}
