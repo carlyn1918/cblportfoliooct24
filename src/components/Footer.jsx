@@ -21,7 +21,7 @@ const Footer = () => {
     <>
       <Box
         sx={{
-          bgcolor: "#123456",
+          bgcolor: "#000", // Black background
           width: "100%", // Full width to match browser size
           zIndex: 1201,
           height: "300px",
