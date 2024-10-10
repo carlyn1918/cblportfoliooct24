@@ -30,7 +30,7 @@ const AboutMe = () => {
             border: "3px solid #fff",
             borderRadius: "10px",
             padding: "20px",
-            backgroundColor: "#111",
+            
             color: "#fff",
             wordWrap: "break-word",
             boxSizing: "border-box",
@@ -39,6 +39,10 @@ const AboutMe = () => {
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
+
+            backgroundImage: `url('/src/assets/mybg.png')`, // Add your background image here
+            backgroundSize: "cover", // Ensure the image covers the entire box
+            backgroundPosition: "center", // Center the image inside the box
           }}
         >
           {/* Box 1: Profile Photo */}
@@ -55,6 +59,8 @@ const AboutMe = () => {
               backgroundColor: "#333",
               margin: "0 auto", // Center the image horizontally
               marginBottom: "20px", // Space below image
+
+             
             }}
           >
             <Avatar
@@ -85,10 +91,10 @@ const AboutMe = () => {
             sx={{
               width: "100%",
               maxWidth: "1800px",
-              border: "3px solid #fff",
+              border: "0",
               borderRadius: "10px",
               padding: "20px",
-              backgroundColor: "#111",
+              
               color: "#fff",
               wordWrap: "break-word",
               boxSizing: "border-box",
@@ -250,7 +256,7 @@ const AboutMe = () => {
               margin: "10px",
             }}
           >
-            <Typography variant="h4">Hello, My name is Carl</Typography>
+            <Typography variant="h4"></Typography>
             <Typography variant="subtitle2">
               I started as a Senior Computer Technician, then moved into IT
               Administration and System Engineering. Now, I’m a full-time IT
