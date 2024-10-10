@@ -31,7 +31,7 @@ const AboutMe = () => {
             border: "3px solid #fff",
             borderRadius: "10px",
             padding: "20px",
-            
+
             color: "#fff",
             wordWrap: "break-word",
             boxSizing: "border-box",
@@ -60,8 +60,6 @@ const AboutMe = () => {
               backgroundColor: "#333",
               margin: "0 auto", // Center the image horizontally
               marginBottom: "20px", // Space below image
-
-             
             }}
           >
             <Avatar
@@ -95,7 +93,7 @@ const AboutMe = () => {
               border: "0",
               borderRadius: "10px",
               padding: "20px",
-              
+
               color: "#fff",
               wordWrap: "break-word",
               boxSizing: "border-box",
