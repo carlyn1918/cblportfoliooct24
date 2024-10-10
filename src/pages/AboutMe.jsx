@@ -4,6 +4,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import MyTabs from "../components/MyTabs";
 
 const AboutMe = () => {
   return (
@@ -315,6 +316,7 @@ const AboutMe = () => {
             with my family.
           </Typography>
         </Box>
+        <MyTabs />
       </Box>
     </>
   );
