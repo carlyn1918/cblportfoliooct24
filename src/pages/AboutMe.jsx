@@ -102,7 +102,7 @@ const AboutMe = () => {
           >
             <Typography variant="h4"></Typography>
             <Typography variant="subtitle2">
-              I started as a Senior Computer Technician, then moved into IT
+              I started as a Computer Technician, then moved into IT
               Administration and System Engineering. Now, I’m a full-time IT
               Consultant. Recently, I discovered my passion for web development,
               and I’m excited to dive deeper into this field. Enjoy your visit

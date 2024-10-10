@@ -5,6 +5,41 @@ import EmailIcon from '@mui/icons-material/Email';
 export default function SendEmailButton() {
   const [open, setOpen] = useState(false);
 
+  // State to store form data
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  // Handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Function to handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent page reload
+    console.log('Form data submitted:', formData);
+
+    // Example: Submit to an API or Email Service (e.g., EmailJS, backend server)
+    // fetch('/api/send-email', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(formData),
+    // }).then(response => response.json())
+    //   .then(data => console.log(data))
+    //   .catch(err => console.error(err));
+
+    // Close the dialog after submission
+    setOpen(false);
+  };
+
+  // Function to open and close the dialog
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -15,7 +50,7 @@ export default function SendEmailButton() {
 
   return (
     <Box>
-      {/* Button with Icon, Text and Custom Glow/Chrome Effect */}
+      {/* Button with Icon, Text, and Glow/Chrome Effect */}
       <Button 
         variant="contained" 
         onClick={handleClickOpen}
@@ -43,45 +78,56 @@ export default function SendEmailButton() {
         Send me an Email
       </Button>
 
-      {/* Dialog (Pop-up) for Email Form */}
+      {/* Pop-up Dialog */}
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Send me an Email</DialogTitle>
         <DialogContent>
-          {/* Email Form Fields */}
-          <TextField
-            autoFocus
-            margin="dense"
-            label="Your Name"
-            type="text"
-            fullWidth
-            variant="outlined"
-            sx={{ marginBottom: '15px' }}
-          />
-          <TextField
-            margin="dense"
-            label="Your Email"
-            type="email"
-            fullWidth
-            variant="outlined"
-            sx={{ marginBottom: '15px' }}
-          />
-          <TextField
-            margin="dense"
-            label="Message"
-            type="text"
-            fullWidth
-            variant="outlined"
-            multiline
-            rows={3}
-          />
+          <form onSubmit={handleSubmit}>
+            {/* Form Fields */}
+            <TextField
+              autoFocus
+              margin="dense"
+              label="Your Name"
+              name="name" // Name is important for state tracking
+              type="text"
+              fullWidth
+              variant="outlined"
+              value={formData.name}
+              onChange={handleChange}
+              sx={{ marginBottom: '15px' }}
+            />
+            <TextField
+              margin="dense"
+              label="Your Email"
+              name="email"
+              type="email"
+              fullWidth
+              variant="outlined"
+              value={formData.email}
+              onChange={handleChange}
+              sx={{ marginBottom: '15px' }}
+            />
+            <TextField
+              margin="dense"
+              label="Message"
+              name="message"
+              type="text"
+              fullWidth
+              variant="outlined"
+              multiline
+              rows={3}
+              value={formData.message}
+              onChange={handleChange}
+            />
+          </form>
         </DialogContent>
-
-        {/* Actions (Send or Cancel) */}
         <DialogActions>
+          {/* Actions */}
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
-          <Button onClick={handleClose} color="primary">
+          {/* Submit Button */}
+          <Button onClick={handleSubmit} color="primary" type="submit">
             Send
           </Button>
         </DialogActions>

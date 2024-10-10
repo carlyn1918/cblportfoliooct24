@@ -1,173 +1,79 @@
 import React from "react";
-import { Box, Typography, Avatar } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
+const socialMediaAccounts = [
+  { name: "Facebook", icon: <FacebookIcon />, color: "#4267B2", label: "CarloFB" },
+  { name: "Twitter", icon: <TwitterIcon />, color: "#1DA1F2", label: "CarloX" },
+  { name: "LinkedIn", icon: <LinkedInIcon />, color: "#0077b5", label: "CarloLinkedIn" },
+  { name: "GitHub", icon: <GitHubIcon />, color: "#fff", label: "CarloGitHub" }
+];
+
+const SocialMediaButton = ({ icon, label, color }) => (
+  <Box
+    sx={{
+      display: "flex",
+      alignItems: "center",  // Align text and icon horizontally
+      justifyContent: "space-between", // Push icon to the right
+      padding: "10px",
+      borderRadius: "8px",
+      backgroundColor: "#222",
+      width: "100%",
+      maxWidth: "200px", // Adjust width if needed
+      color: "#fff",
+      // Chrome and glowing effect
+      border: "2px solid", 
+      borderImage:
+        "linear-gradient(45deg, #f3ec78, #af4261, #4267B2, #1DA1F2, #0077b5, #fff) 1",
+      boxShadow: "0 0 10px rgba(255, 255, 255, 0.5)", 
+      transition: "border 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
+      "&:hover": {
+        boxShadow: "0 0 20px rgba(255, 255, 255, 0.8)"
+      },
+      "@media (max-width: 600px)": {
+        maxWidth: "100%", // Make full width on mobile
+      }
+    }}
+  >
+    
+    {/* Icon on the right */}
+    {React.cloneElement(icon, { sx: { color: color } })}
+    {/* Text on the left */}
+    <Typography variant="body2" color="#fff" sx={{ marginRight: "2px" }}>
+      {label}
+    </Typography>
+  </Box>
+);
 
 export default function SocialMediaButtons() {
-  return ( 
-
-<Box
-  sx={{
-    width: "100%",
-    maxWidth: "1800px",
-    border: "0",
-    borderRadius: "10px",
-    padding: "20px",
-
-    color: "#fff",
-    wordWrap: "break-word",
-    boxSizing: "border-box",
-    transition: "all 0.3s ease-in-out",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "row", // Default for larger screens
-    gap: "20px",
-    flexShrink: "1",
-    "@media (max-width: 600px)": {
-      // Media query for mobile devices
-      flexDirection: "column", // Stack vertically on mobile
-      gap: "10px", // Reduce gap between boxes
-    },
-  }}
->
-  {/* Social Media - Facebook */}
-  <Box
-    sx={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      border: "2px solid #fff",
-      padding: "10px",
-      borderRadius: "8px",
-      backgroundColor: "#222",
-      width: "100%", // Ensures it takes full width on mobile
-      maxWidth: "100px", // Keeps size manageable on larger screens
-
-      // Chrome and glowing effect
-      border: "2px solid", // Increase border thickness for a chrome effect
-      borderImage:
-        "linear-gradient(45deg, #f3ec78, #af4261, #4267B2, #1DA1F2, #0077b5, #fff) 1", // Gradient for the chrome look
-      padding: "10px",
-      borderRadius: "4px",
-      backgroundColor: "#222",
-      boxShadow: "0 0 10px rgba(255, 255, 255, 0.5)", // Optional glow effect
-      transition: "border 0.3s ease-in-out", // Smooth transition for hover or resize
-      "&:hover": {
-        boxShadow: "0 0 20px rgba(255, 255, 255, 0.8)", // Enhance glow on hover
-      },
-    }}
-  >
-    <FacebookIcon sx={{ color: "#4267B2" }} />
-    <Typography variant="body2" color="#fff">
-      CarloFB
-    </Typography>
-  </Box>
-
-  {/* Social Media - Twitter */}
-  <Box
-    sx={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      border: "2px solid #fff",
-      padding: "10px",
-      borderRadius: "8px",
-      backgroundColor: "#222",
-      width: "100%",
-      maxWidth: "100px",
-
-      // Chrome and glowing effect
-      border: "2px solid", // Increase border thickness for a chrome effect
-      borderImage:
-        "linear-gradient(45deg, #f3ec78, #af4261, #4267B2, #1DA1F2, #0077b5, #fff) 1", // Gradient for the chrome look
-      padding: "10px",
-      borderRadius: "4px",
-      backgroundColor: "#222",
-      boxShadow: "0 0 10px rgba(255, 255, 255, 0.5)", // Optional glow effect
-      transition: "border 0.3s ease-in-out", // Smooth transition for hover or resize
-      "&:hover": {
-        boxShadow: "0 0 20px rgba(255, 255, 255, 0.8)", // Enhance glow on hover
-      },
-    }}
-  >
-    <TwitterIcon sx={{ color: "#1DA1F2" }} />
-    <Typography variant="body2" color="#fff">
-      CarloX
-    </Typography>
-  </Box>
-
-  {/* Social Media - LinkedIn */}
-  <Box
-    sx={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      border: "2px solid #fff",
-      padding: "10px",
-      borderRadius: "8px",
-      backgroundColor: "#222",
-      width: "100%",
-      maxWidth: "100px",
-
-      // Chrome and glowing effect
-      border: "2px solid", // Increase border thickness for a chrome effect
-      borderImage:
-        "linear-gradient(45deg, #f3ec78, #af4261, #4267B2, #1DA1F2, #0077b5, #fff) 1", // Gradient for the chrome look
-      padding: "10px",
-      borderRadius: "4px",
-      backgroundColor: "#222",
-      boxShadow: "0 0 10px rgba(255, 255, 255, 0.5)", // Optional glow effect
-      transition: "border 0.3s ease-in-out", // Smooth transition for hover or resize
-      "&:hover": {
-        boxShadow: "0 0 20px rgba(255, 255, 255, 0.8)", // Enhance glow on hover
-      },
-    }}
-  >
-    <LinkedInIcon sx={{ color: "#0077b5" }} />
-    <Typography variant="body2" color="#fff">
-      CarloLinkedIn
-    </Typography>
-  </Box>
-
-  {/* Social Media - GitHub */}
-  <Box
-    sx={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      border: "2px solid #fff",
-      padding: "10px",
-      borderRadius: "8px",
-      backgroundColor: "#222",
-      width: "100%",
-      maxWidth: "100px",
-
-      // Chrome and glowing effect
-      border: "2px solid", // Increase border thickness for a chrome effect
-      borderImage:
-        "linear-gradient(45deg, #f3ec78, #af4261, #4267B2, #1DA1F2, #0077b5, #fff) 1", // Gradient for the chrome look
-      padding: "10px",
-      borderRadius: "4px",
-      backgroundColor: "#222",
-      boxShadow: "0 0 10px rgba(255, 255, 255, 0.5)", // Optional glow effect
-      transition: "border 0.3s ease-in-out", // Smooth transition for hover or resize
-      "&:hover": {
-        boxShadow: "0 0 20px rgba(255, 255, 255, 0.8)", // Enhance glow on hover
-      },
-    }}
-  >
-    <GitHubIcon sx={{ color: "#fff" }} />
-    <Typography variant="body2" color="#fff">
-      CarloGitHub
-    </Typography>
-  </Box>
-</Box>
-
-);
+  return (
+    <Box
+      sx={{
+        width: "100%",
+        maxWidth: "600px",
+        padding: "10px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "row",
+        gap: "10px",
+        "@media (max-width: 500px)": {
+          flexDirection: "column",
+          gap: "10px", // Stack vertically on mobile
+        },
+      }}
+    >
+      {socialMediaAccounts.map((account) => (
+        <SocialMediaButton
+          key={account.name}
+          icon={account.icon}
+          label={account.label}
+          color={account.color}
+        />
+      ))}
+    </Box>
+  );
 }
-
-
