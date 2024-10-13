@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Box, Typography, Avatar } from "@mui/material";
 
@@ -5,6 +6,9 @@ import MyTabs from "../components/MyTabs";
 
 import SendEmailButton from "../components/SendEmailButton";
 import SocialMediaButtons from "../components/SocialMediaButtons";
+
+
+
 
 const AboutMe = () => {
   return (
@@ -107,7 +111,11 @@ const AboutMe = () => {
               Consultant. Recently, I discovered my passion for web development,
               and I’m excited to dive deeper into this field. Enjoy your visit
               to my web developer page!
+
+              
             </Typography>
+
+            
           </Box>
 
           <SendEmailButton />

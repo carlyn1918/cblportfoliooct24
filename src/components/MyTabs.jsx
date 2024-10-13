@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Tabs, Tab, Box, Typography } from '@mui/material';
+import FrontWebDevSkills from './CardList/FrontWebDevSkills.jsx';
+
 
 export default function MyTabs() {
   const [activeTab, setActiveTab] = useState(0);
@@ -38,6 +40,8 @@ export default function MyTabs() {
       <TabPanel value={activeTab} index={0}>
         <Typography variant="h6">Overview Content</Typography>
         <Typography>Welcome to the Overview section.</Typography>
+        <FrontWebDevSkills />
+        
       </TabPanel>
       <TabPanel value={activeTab} index={1}>
         <Typography variant="h6">Projects Content</Typography>
