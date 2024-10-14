@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Box, Typography } from "@mui/material";
-import PageBodyWrapper from "../components/PageBodyWrapper";
+
 
 const Blog = () => {
   return (

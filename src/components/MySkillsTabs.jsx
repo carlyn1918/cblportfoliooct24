@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Tabs, Tab, Box, Typography } from '@mui/material';
 import FrontWebDevSkills from './CardList/FrontWebDevSkills.jsx';
+import BackWebDevSkills from './CardList/BackWebDevSkills.jsx';
 
 
 export default function MySkillsTabs() {
@@ -79,6 +80,8 @@ export default function MySkillsTabs() {
       <TabPanel value={activeTab} index={1}>
         <Typography variant="h6">Back-end Development Skills</Typography>
         <Typography>Here are some of my recent projects.</Typography>
+        <BackWebDevSkills />
+
       </TabPanel>
       <TabPanel value={activeTab} index={2}>
         <Typography variant="h6">Graphic Design Tools Knowledge</Typography>
