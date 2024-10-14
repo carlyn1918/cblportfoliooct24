@@ -18,7 +18,7 @@ const SkillCard = ({ logo, skillName, rating }) => {
       sx={{
         width: 110,
         height: 110,
-        backgroundColor: "rgba(0, 0, 0, 0.1)", // Slightly transparent
+        backgroundColor: "rgba(0, 0, 0, 0.5)", // Slightly transparent
         textAlign: "center",
         margin: 2,
         borderRadius: 2, // Keeps the card square but slightly rounded
@@ -27,6 +27,7 @@ const SkillCard = ({ logo, skillName, rating }) => {
         transition: "0.3s", // Smooth transition
         "&:hover": {
           boxShadow: "0 0 15px 5px rgba(255, 255, 255, 0.6)", // Glow effect on hover
+          backgroundColor: "rgb(255, 0, 153)",
         },
       }}
     >

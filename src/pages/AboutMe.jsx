@@ -80,6 +80,7 @@ const AboutMe = () => {
               marginBottom: "20px", // Space below the text
               width: "100%",
               maxWidth: "600px",
+              flexWrap: 'wrap',
             }}
           >
             <Typography variant="h4">Hello, My name is Carl</Typography>
@@ -119,6 +120,7 @@ const AboutMe = () => {
           </Box>
 
           <SendEmailButton />
+          <MySkillsTabs />
         </Box>
 
         {/* Second Box - Skills */}

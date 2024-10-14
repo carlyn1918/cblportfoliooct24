@@ -24,7 +24,7 @@ const SocialMediaButton = ({ icon, label, color, link }) => (
       alignItems: "center",
       padding: "10px",
       borderRadius: "8px",
-      backgroundColor: "#222",
+      backgroundColor: "rgba(0, 0, 0, 0.3)", // Slightly transparent,
       width: "100%",
       maxWidth: "120px",
       color: "#fff",
