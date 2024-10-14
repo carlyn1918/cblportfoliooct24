@@ -3,7 +3,7 @@ import { Tabs, Tab, Box, Typography } from '@mui/material';
 import FrontWebDevSkills from './CardList/FrontWebDevSkills.jsx';
 
 
-export default function MyTabs() {
+export default function MySkillsTabs() {
   const [activeTab, setActiveTab] = useState(0);
 
   // Handle tab switching

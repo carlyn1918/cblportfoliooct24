@@ -17,7 +17,7 @@ const SkillCard = ({ logo, skillName, rating }) => {
     <Card
       sx={{
         width: 110,
-        height: 130,
+        height: 110,
         backgroundColor: "rgba(0, 0, 0, 0.1)", // Slightly transparent
         textAlign: "center",
         margin: 2,

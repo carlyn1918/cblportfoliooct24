@@ -2,7 +2,7 @@
 import React from "react";
 import { Box, Typography, Avatar } from "@mui/material";
 
-import MyTabs from "../components/MyTabs";
+import MySkillsTabs from "../components/MySkillsTabs";
 
 import SendEmailButton from "../components/SendEmailButton";
 import SocialMediaButtons from "../components/SocialMediaButtons";
@@ -169,7 +169,7 @@ const AboutMe = () => {
             with my family. test test
           </Typography>
         </Box>
-        <MyTabs />
+        <MySkillsTabs />
       </Box>
     </>
   );
