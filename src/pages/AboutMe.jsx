@@ -120,7 +120,16 @@ const AboutMe = () => {
           </Box>
 
           <SendEmailButton />
+            {/* SKILLS AREA BELOW */}
+            {/* SKILLS AREA BELOW */}
+          
           <MySkillsTabs />
+
+
+
+
+
+          
         </Box>
 
         {/* Second Box - Skills */}
