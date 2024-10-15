@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { Tabs, Tab, Box, Typography } from '@mui/material';
 import FrontWebDevSkills from './CardList/FrontWebDevSkills.jsx';
 import BackWebDevSkills from './CardList/BackWebDevSkills.jsx';
+import WebDevProjects from './CardList/WebDevProjects.jsx';
 
 
-export default function MySkillsTabs() {
+export default function MyProjectsTabs() {
   const [activeTab, setActiveTab] = useState(0);
 
   // Handle tab switching
@@ -28,7 +29,7 @@ export default function MySkillsTabs() {
         textAlign: 'center', // This centers the content text
       }}>
       {/* Tabs */}
-      <Typography variant="h4" sx={{ marginTop: '20px', marginBottom: '20px'}}>My Unique Blend of Skills</Typography>
+      <Typography variant="h4" sx={{ marginTop: '20px', marginBottom: '20px'}}>Solutions Delivered</Typography>
 
       <Tabs
         value={activeTab}
@@ -64,33 +65,30 @@ export default function MySkillsTabs() {
           },
         }}
       >
-        <Tab label="Front-end Development" />
-        <Tab label="Back-end Development" />
-        <Tab label="Graphic Design" />
-        <Tab label="I.T Consultancy" />
+        <Tab label="Web Dev Projects" />
+        <Tab label="Graphic Designs" />
+        <Tab label="I.T Infrastructure" />
+        
       </Tabs>
 
       {/* Tab Content */}
       <TabPanel value={activeTab} index={0} >
-        <Typography variant="h6">Front-end Development Skills</Typography>
-        <Typography>Welcome to the Overview section.</Typography>
-        <FrontWebDevSkills />
+        <Typography variant="h6">Web Development & Designs Projects</Typography>
+        <Typography>From Concept to Code</Typography>
+        <WebDevProjects />
         
       </TabPanel>
       <TabPanel value={activeTab} index={1}>
-        <Typography variant="h6">Back-end Development Skills</Typography>
+        <Typography variant="h6">Graphic Design Projects</Typography>
         <Typography>Here are some of my recent projects.</Typography>
         <BackWebDevSkills />
 
       </TabPanel>
-      <TabPanel value={activeTab} index={2}>
-        <Typography variant="h6">Graphic Design Tools Knowledge</Typography>
-        <Typography>Get in touch with me here.</Typography>
-      </TabPanel>
       <TabPanel value={activeTab} index={4}>
-        <Typography variant="h6">I.T Consultancy</Typography>
-        <Typography>Get in touch with me here.</Typography>
+        <Typography variant="h6">I.T Infrastructure Projects</Typography>
+        <Typography>Building Digital Foundations.</Typography>
       </TabPanel>
+      
       
     </Box>
   );

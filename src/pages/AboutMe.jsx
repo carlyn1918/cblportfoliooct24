@@ -6,6 +6,7 @@ import MySkillsTabs from "../components/MySkillsTabs";
 
 import SendEmailButton from "../components/SendEmailButton";
 import SocialMediaButtons from "../components/SocialMediaButtons";
+import MyProjectsTabs from "../components/MyProjectsTabs";
 
 
 
@@ -124,12 +125,12 @@ const AboutMe = () => {
             {/* SKILLS AREA BELOW */}
           
           <MySkillsTabs />
+          <MyProjectsTabs />
 
 
 
 
 
-          
         </Box>
 
         {/* Second Box - Skills */}
